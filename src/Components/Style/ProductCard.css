@@ -1,0 +1,37 @@
+.card{
+    width: 16rem;
+    margin: 0px auto;
+    max-height: 20rem;
+    transition: all 0.2s ease;
+    box-shadow: 1px 1px 3px 3px rgb(95, 92, 92);
+}
+.badge{
+    width:fit-content;
+    position: absolute;
+    right: 3px;
+    top: 3px;
+}
+.card:hover{
+    transform: scale(1.02);
+    border:1px solid black;
+}
+.card-footer{
+    display: flex;
+    padding: 10px 5px;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-title{
+    font-size: 0.9rem;
+    font-weight: 600;
+    background-color: transparent;
+
+}
+#cardData{
+    background-color: transparent;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+.imageSize{
+    height:185px
+}

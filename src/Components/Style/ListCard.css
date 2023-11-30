@@ -1,0 +1,20 @@
+.list-card{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px;
+}
+.list-card-content{
+    width: 60%;
+    height: 99%;
+    padding-left: 2vw;
+}
+@media screen and (max-width:450px) {
+    .list-card{
+        flex-direction: column;
+    }
+    .list-card-content{
+        width:90%;
+        margin: 10px;
+    }
+}

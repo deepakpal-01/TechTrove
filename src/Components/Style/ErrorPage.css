@@ -1,0 +1,28 @@
+.errorDiv{
+    width:100vw;
+    height:90vh;
+    padding-top: 3vw;
+    background: url('../Images/error-background.webp');
+    background-size: cover;
+    
+}
+.circle{
+    width: 50vw;
+    height: 60vh;
+    border-radius: 50px;
+    margin: auto;
+    border: 2px solid white;
+    background: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@media screen and (max-width:720px) {
+    .circle{
+        width: 90vw;
+    }
+    .errorDiv{
+        padding-top: 5vw;
+    }
+}
