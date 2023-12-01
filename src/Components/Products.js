@@ -45,6 +45,11 @@ export default function Products({setProgress}) {
     filterBox.classList.toggle('hide-filters')
   }
   
+  const closeFilterBox=()=>{
+    let filterBox=document.getElementsByClassName('filter-section')[0]
+    filterBox.classList.add('hide-filters')
+  }
+  
   const handleSort=(e)=>{
     let sortCount=sort
     setSort(sortCount+1)
@@ -70,7 +75,7 @@ export default function Products({setProgress}) {
       <FaFilter onClick={showFilterBox}  className='filter-icon'/>
 
       <div className="filter-section hide-filters">
-        <FilterSection />
+        <FilterSection closeFilterBox={closeFilterBox} />
       </div>
 
       <div className="product-section">

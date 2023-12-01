@@ -26,7 +26,7 @@ return (
                     <span id='cardData' className='cardData card-price'><FormatPrice price={props.price} /></span>
                 </div>
             </div>
-            <div className="list-card-content">
+            <div className="list-card-content my-3">
                 <h4>{props.title}</h4>
                 <span id='cardData' className='cardData'><FormatPrice price={props.price} /></span>
                 <p className='my-2' style={{ fontSize: "0.9rem" }}>{props.description}The {props.title} is continually evolving with advancements in technology. Each product serves specific purpose</p>

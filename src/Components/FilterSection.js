@@ -4,7 +4,7 @@ import { useFilterProviderContext } from './Contexts/FilterContext';
 import { useProductContext } from './Contexts/ProductContext';
 import FormatPrice from './Helper/FormatPrice';
 
-export default function FilterSection() {
+export default function FilterSection({closeFilterBox}) {
 
     const {myProducts}=useProductContext();
 
@@ -110,8 +110,9 @@ useEffect(()=>{
         <input id='price-filter-input' type="range" min="0" value={filterPrice} max={maxPrice} onChange={priceFilter}/>
     </div>
 
-    <div className="filter-button">
+    <div className="filter-button d-flex">
     <button onClick={handleClearBtn}  type="button" className="btn btn-primary myButton my-2 ">CLEAR FILTERS</button>
+    <button id='close-filter-btn' onClick={closeFilterBox} style={{background:"rgb(207, 36, 36)",border:"red"}}  type="button" className="btn btn-primary myButton my-2 mx-4 ">CLOSE</button>
     </div>
     
     </>
