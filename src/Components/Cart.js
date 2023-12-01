@@ -60,7 +60,7 @@ useEffect(()=>{
       <button onClick={goToShopping} type="button" className="btn btn-primary myButton">CONTINUE SHOPPING</button>
       <button onClick={()=>handleClearCart()}  type="button" className="btn clear-cart-btn">CLEAR CART</button>
       </div>
-      <div className=" container d-flex flex-column justify-content-center align-items-end  my-3 ">
+      <div className=" container d-flex flex-column justify-content-center checkout-box  my-3 ">
         <div className="checkout">
         <div className="total none-bg">
           SubTotal : <b className='none-bg'><FormatPrice price={subTotal}/></b>

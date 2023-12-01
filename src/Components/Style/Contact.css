@@ -260,7 +260,9 @@ input,textarea{
     bottom: 25%;
     width: 45%;
     height: 50%;
-    
+}
+.button{
+  z-index: 900;
 }
 }
 
