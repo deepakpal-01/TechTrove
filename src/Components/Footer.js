@@ -35,9 +35,9 @@ export default function Footer() {
 
                 <div id="contact" className="contact">
                     <h3>TechTrove</h3>
-                    <h5>Address:-</h5> Delhi University.(DUCS)
-                    <h5>Phone:-</h5> +91123456123 +11001410014
-                    <h5>Hours:-</h5> 24*7 Monday-Sunday
+                    <h5>Address:-</h5><p> Delhi University.(DUCS)</p>
+                    <h5>Phone:-</h5> <p>+91123456123 +11001410014</p>
+                    <h5>Hours:-</h5> <p>24*7 Monday-Sunday</p>
                     <h5>Follow Us </h5>
                     <div className="social-media">
                         <a href="https://www.facebook.com/login/"><i className="fa-brands fa-facebook fa-xl mx-1"></i></a>

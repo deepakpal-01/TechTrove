@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useState,useEffect} from 'react'
 import styled from 'styled-components';
 import { useFilterProviderContext } from './Contexts/FilterContext';
 import { useProductContext } from './Contexts/ProductContext';
@@ -8,7 +8,7 @@ export default function FilterSection() {
 
     const {myProducts}=useProductContext();
 
-    const {setCategory,setBrand,searchVal,setSearchVal,filterPrice,setFilterPrice,maxPrice,clearFilter,clear,setClear} =useFilterProviderContext();
+    const {setCategory,setBrand,searchVal,setSearchVal,filterPrice,setFilterPrice,maxPrice,setMaxPrice,getMaxPrice,clearFilter,clear,setClear} =useFilterProviderContext();
 
     const colorsArr=["#000000","#6e0e0a","#ffba08","#124e78"]
     //eslint-disable-next-line
@@ -63,6 +63,11 @@ export default function FilterSection() {
         flex-direction: column;
     }
 `
+
+useEffect(()=>{
+    setMaxPrice(getMaxPrice(myProducts))
+    setFilterPrice(maxPrice)
+},[myProducts])
 
   return (
     <>

@@ -9,17 +9,22 @@ const CartContext=createContext();
 function CartProvider(props) {
 
     const getLocalCart=()=>{
+        //eslint-disable-next-line
         let localItems=localStorage.getItem("MyCart")
+        const parsedLocalItems=JSON.parse(localItems);
+        if(!Array.isArray(parsedLocalItems)) return [];
+        return parsedLocalItems;
         
-        if(localItems.length===0){
-            return []
-        }
-        else{
-            return JSON.parse(localItems)
-        }
+        // if(localItems.length===0){
+        //     return []
+        // }
+        // else{
+        //     return JSON.parse(localItems)
+        // }
     }   
     const getCartQuantity=()=>{
         let localCartQuantity=localStorage.getItem("CartQuantity")
+
         if(getLocalCart().length===0){
             return 0;
         }
@@ -27,6 +32,7 @@ function CartProvider(props) {
     } 
     const getSubTotal=()=>{
         let localSubTotal=localStorage.getItem("subTotal")
+        
         if(getLocalCart().length===0){
             return 0;
         }

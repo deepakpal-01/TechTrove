@@ -78,32 +78,39 @@ export default function Container({isLoading,gridview,listview}){
       })
   }
  
+useEffect(()=>{
+    
+    setContainerProducts(myProducts)
+},[myProducts])
 
- 
+useEffect(()=>{
+  setContainerProducts(containerProducts)
+},[gridview])
+
 
 useEffect(()=>{
    setContainerProducts(containerProducts)
-   //eslint-disable-next-line
+   
 },[sort])
   
   useEffect(()=>{
     filterProductsCategory()
-    //eslint-disable-next-line
+    
   },[category])
 
   useEffect(()=>{
     filterProductsBrand()
-    //eslint-disable-next-line
-  },[brand,containerProducts])
+    
+  },[brand])
 
   useEffect(()=>{
     search(searchVal)
-    //eslint-disable-next-line
+    
   },[searchVal,containerProducts])
 
   useEffect(()=>{
     cardFilterOnPrice(filterPrice)
-    //eslint-disable-next-line
+    
   },[filterPrice,containerProducts])
 
 

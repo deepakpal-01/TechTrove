@@ -11,7 +11,7 @@ import { useFilterProviderContext } from './Contexts/FilterContext';
 
 export default function Products({setProgress}) {
   
-  const {containerProducts}=useProductContext();
+  // const {containerProducts}=useProductContext();
   const {isLoading}=useProductContext();
   const{sortPrice,setSort,sort}=useFilterProviderContext();
   
@@ -56,8 +56,7 @@ export default function Products({setProgress}) {
     setProgress(30)
     window.scrollTo(0, 0);
     setProgress(100)
-    // eslint-disable-next-line
-  },[containerProducts])
+  },[])
 
 
   if(isLoading){

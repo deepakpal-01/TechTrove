@@ -31,7 +31,6 @@ function FilterProvider(props){
                 return parseInt(b.price)-parseInt(a.price);
             }
         }) 
-        console.log(containerProducts)
         setContainerProducts(containerProducts)
     }
     const clearFilter=()=>{
@@ -43,6 +42,7 @@ function FilterProvider(props){
         setSort(0)
         setClear(0)
     }
+    
 
 
     const [containerProducts,setContainerProducts]=useState(myProducts);
@@ -58,11 +58,10 @@ function FilterProvider(props){
     useEffect(()=>{
         setMaxPrice(getMaxPrice(myProducts))
         setFilterPrice(maxPrice)
-        //eslint-disable-next-line
     },[myProducts])
 
      return(
-        <FilterContext.Provider value={{containerProducts,setContainerProducts,category,setCategory,brand,setBrand,searchVal,setSearchVal,filterPrice,setFilterPrice,maxPrice,sortPrice,sort,setSort,clearFilter,clear,setClear}}>
+        <FilterContext.Provider value={{containerProducts,setContainerProducts,category,setCategory,brand,setBrand,searchVal,setSearchVal,filterPrice,setFilterPrice,maxPrice,setMaxPrice,getMaxPrice,sortPrice,sort,setSort,clearFilter,clear,setClear}}>
             {props.children}
         </FilterContext.Provider>
      );   
